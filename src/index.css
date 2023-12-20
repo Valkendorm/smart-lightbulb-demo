@@ -25,7 +25,6 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -65,4 +64,99 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* Demo styles */
+
+.page {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 748px;
+}
+
+.container.horizontal {
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+}
+
+.controls {
+  margin-bottom: 24px;
+  padding: 16px;
+  border: 1px solid #323232;
+  border-radius: 16px;
+  box-shadow: 2px 0px 8px #a1a1a1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 12px;
+}
+
+.lightbulb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  width: 64px;
+  height: 64px;
+  border: 4px solid rgba(200, 200, 200, 0.9);
+  border-radius: 9999px;
+  transition-property: all;
+  transition-timing-function: ease-out;
+  box-shadow: 0 0 0 4px white;
+}
+
+.lightbulb-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.lightbulb-container > input[type="color"] {
+  width: 20px;
+  height: 20px;
+  border: 0;
+}
+
+.lightbulb-container > input {
+  display: none;
+}
+
+.lightbulb-container > pre {
+  display: none;
+}
+
+/* Animations */
+
+.rotate.fast {
+  animation-duration: 4s;
+}
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+
+.rotate.slow {
+  animation-duration: 16s;
+}
+
+/* Speed */
+.slow {
+  transition-duration: 2s;
+  border-style: dotted;
+}
+.normal {
+  transition-duration: 1s;
+  border-style: dashed;
+}
+.fast {
+  transition-duration: 0.5s;
 }
