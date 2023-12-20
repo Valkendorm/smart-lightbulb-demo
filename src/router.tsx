@@ -12,6 +12,7 @@ import { SmartLightbulbV4Demo } from "./routes/v4";
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
+      <Route index element={<div>Select a demo</div>} />
       <Route path="v1" element={<SmartLightbulbV1Demo />} />
       <Route path="v2" element={<SmartLightbulbV2Demo />} />
       <Route path="v3" element={<SmartLightbulbV3Demo />} />
