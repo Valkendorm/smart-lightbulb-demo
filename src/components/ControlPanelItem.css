@@ -1,0 +1,7 @@
+.control-panel-item label {
+  display: block;
+  color: #969696;
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  line-height: 2rem;
+}

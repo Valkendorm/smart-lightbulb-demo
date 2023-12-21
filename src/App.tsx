@@ -1,27 +1,28 @@
-import "./App.css";
 import { Link, Outlet } from "react-router-dom";
+import { SideNavigation } from "./components/SideNavigation";
+import "./App.css";
+
+const links = [
+  { to: "choose-a-color", label: "Choose a color" },
+  { to: "cycle-colors", label: "Cycle colors" },
+  { to: "random-colors", label: "Random colors" },
+  { to: "global-controls", label: "Global controls" },
+];
 
 function App() {
   return (
-    <div>
-      <h3>Demos</h3>
-      <nav>
-        <ul>
-          <li>
-            <Link to="v1">Choose a color</Link>
-          </li>
-          <li>
-            <Link to="v2">Cycle colors</Link>
-          </li>
-          <li>
-            <Link to="v3">Random colors</Link>
-          </li>
-          <li>
-            <Link to="v4">Global controls</Link>
-          </li>
-        </ul>
-      </nav>
-      <Outlet />
+    <div className="app">
+      <header>
+        <h1>
+          <Link to="/">💡 Smart Lightbulb</Link>
+        </h1>
+      </header>
+      <main>
+        <SideNavigation links={links} />
+        <section>
+          <Outlet />
+        </section>
+      </main>
     </div>
   );
 }

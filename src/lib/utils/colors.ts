@@ -17,7 +17,7 @@ export function getRandomHexColor(color: string) {
  */
 export function getNextHexColor(color: string) {
   const currentColor = parseInt(color.replace("#", ""), 16);
-  let nextColor = isNaN(currentColor) ? 0 : currentColor + 1000;
+  let nextColor = isNaN(currentColor) ? 0 : currentColor + 255 * 3;
   if (nextColor >= MAX_COLOR_VALUE) nextColor = 0;
   return `#${nextColor.toString(16).padStart(6, "0")}`;
 }
