@@ -2,9 +2,12 @@ import { useActor } from "@xstate/react";
 import { smartLightbulbMachine } from "../lib/smartLightbulb/smartLightbulb.v2.machine";
 import { ControlPanel } from "../components/ControlPanel";
 import { ControlPanelItem } from "../components/ControlPanelItem";
+import { inspector } from "../lib/utils/inspector";
 
 export function SmartLightbulbV2Demo() {
-  const [state, send] = useActor(smartLightbulbMachine);
+  const [state, send] = useActor(smartLightbulbMachine, {
+    inspect: inspector.inspect,
+  });
   const backgroundColor = state.matches("on") ? state.context.color : undefined;
 
   return (

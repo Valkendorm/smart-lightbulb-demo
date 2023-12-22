@@ -18,6 +18,7 @@
 
 a {
   color: #17acde;
+  font-weight: 500;
   text-decoration: inherit;
 }
 a:hover {
@@ -73,7 +74,12 @@ button:focus-visible {
 .grid {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
+  padding: 0px 16px;
   gap: 12px;
+}
+
+.interactive {
+  cursor: pointer;
 }
 
 .lightbulb {
@@ -89,7 +95,6 @@ button:focus-visible {
   transition-timing-function: ease-out;
   box-shadow: 0 0 0 4px white;
 }
-
 .lightbulb-container {
   display: flex;
   flex-direction: column;
@@ -97,18 +102,27 @@ button:focus-visible {
   gap: 2px;
 }
 
+.lightbulb-container dialog {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 9999;
+  width: 200px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px #323232;
+}
+
+.lightbulb-container .footer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
 .lightbulb-container > input[type="color"] {
   width: 20px;
   height: 20px;
   border: 0;
-}
-
-.lightbulb-container > input {
-  display: none;
-}
-
-.lightbulb-container > pre {
-  display: none;
 }
 
 /* Animations */

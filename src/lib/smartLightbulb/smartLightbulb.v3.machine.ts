@@ -106,12 +106,4 @@ export const smartLightbulbMachine = setup({
       target: ".broken",
     },
   },
-  types: {} as {
-    events:
-      | { type: "color.change"; color: string }
-      | { type: "breaks" }
-      | { type: "power.toggle" }
-      | { type: "mode.toggle" };
-    context: { color: string };
-  },
 });
