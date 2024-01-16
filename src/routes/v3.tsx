@@ -62,7 +62,7 @@ export function SmartLightbulbV3Demo() {
       <div className="embed">
         <iframe
           title="Smart Lightbulb statechart"
-          src="https://stately.ai/registry/editor/embed/4930e058-cdd2-411a-b414-0cb922713a48?machineId=24735b2e-e307-42b7-a243-0c7bca007c23&mode=Simulate"
+          src="https://stately.ai/registry/editor/embed/4930e058-cdd2-411a-b414-0cb922713a48?machineId=24735b2e-e307-42b7-a243-0c7bca007c23&mode=Design"
         />
       </div>
     </div>
