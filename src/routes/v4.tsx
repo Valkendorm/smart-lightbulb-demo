@@ -24,6 +24,12 @@ function Lightbulb({
   const isBroken = useSelector(actorRef, (snapshot) =>
     snapshot.matches("broken")
   );
+  const canTogglePower = useSelector(actorRef, (snapshot) =>
+    snapshot.can({ type: "power.toggle" })
+  );
+  const canToggleMode = useSelector(actorRef, (snapshot) =>
+    snapshot.can({ type: "mode.toggle" })
+  );
   const canChangeColor = useSelector(actorRef, (snapshot) =>
     snapshot.can({ type: "color.change", color: snapshot.context.color })
   );
@@ -39,7 +45,10 @@ function Lightbulb({
       </div>
       <dialog open={open}>
         <ControlPanelItem label="Power">
-          <button onClick={() => actorRef.send({ type: "power.toggle" })}>
+          <button
+            disabled={!canTogglePower}
+            onClick={() => actorRef.send({ type: "power.toggle" })}
+          >
             Power {isPoweredOn ? "Off" : "On"}
           </button>
         </ControlPanelItem>
@@ -54,7 +63,10 @@ function Lightbulb({
           />
         </ControlPanelItem>
         <ControlPanelItem label="Mode">
-          <button onClick={() => actorRef.send({ type: "mode.toggle" })}>
+          <button
+            disabled={!canToggleMode}
+            onClick={() => actorRef.send({ type: "mode.toggle" })}
+          >
             Toggle
           </button>
         </ControlPanelItem>
