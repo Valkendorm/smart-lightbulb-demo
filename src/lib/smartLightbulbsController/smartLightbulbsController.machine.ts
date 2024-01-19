@@ -16,6 +16,9 @@ export const smartLightbulbsControllerMachine = createMachine(
     id: "Smart Lightbulbs Controller",
     entry: {
       type: "assignLightbulbs",
+      params: {
+        count: 100,
+      },
     },
     on: {
       "color.change": {
@@ -44,14 +47,16 @@ export const smartLightbulbsControllerMachine = createMachine(
       context: {
         lightbulbRefs: ActorRefFrom<typeof smartLightbulbMachine>[];
       };
-      actions: { type: "assignLightbulbs" } | { type: "forwardToLightbulbs" };
+      actions:
+        | { type: "assignLightbulbs"; params: { count: number } }
+        | { type: "forwardToLightbulbs" };
     },
   },
   {
     actions: {
       assignLightbulbs: assign({
-        lightbulbRefs: ({ spawn }) => {
-          const lightbulbRefs = Array.from({ length: 100 }, () =>
+        lightbulbRefs: ({ spawn }, params) => {
+          const lightbulbRefs = Array.from({ length: params.count }, () =>
             spawn(smartLightbulbMachine)
           );
           return lightbulbRefs;
