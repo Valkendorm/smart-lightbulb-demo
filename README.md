@@ -39,6 +39,18 @@ pnpm preview
 
 Locally runs the production build from its `./dist` folder.
 
+## Testing
+
+The project is configured with [Vitest](https://vitest.dev) on a bare minimal setup, for demo purpose.
+
+Only the first version of the smart lightbulb machine has tests, which were generated in most part by the Stately Studio.
+
+### Run tests locally
+
+```sh
+pnpm test
+```
+
 ## Deployment
 
 Deployment is automated with [Vercel](https://vercel.com).
