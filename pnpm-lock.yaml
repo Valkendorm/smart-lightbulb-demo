@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@statelyai/inspect':
     specifier: ^0.0.11
-    version: 0.0.11(ws@8.15.1)
+    version: 0.0.11(ws@8.17.1)
   '@xstate/react':
     specifier: ^4.0.1
     version: 4.0.1(@types/react@18.2.43)(react@18.2.0)(xstate@5.3.1)
@@ -725,11 +725,11 @@ packages:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
     dev: true
 
-  /@statelyai/inspect@0.0.11(ws@8.15.1):
+  /@statelyai/inspect@0.0.11(ws@8.17.1):
     resolution: {integrity: sha512-IgWob6yTiGF4OUb50AStnSOupiZUg4hXTy12SzUS/vpwv60aY1wcPSXrnaRnv5G+xH7zWIILzQlKhIZyiZqJhg==}
     dependencies:
       fast-safe-stringify: 2.1.1
-      isomorphic-ws: 5.0.0(ws@8.15.1)
+      isomorphic-ws: 5.0.0(ws@8.17.1)
       xstate: 5.1.0
     transitivePeerDependencies:
       - ws
@@ -1638,12 +1638,12 @@ packages:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
 
-  /isomorphic-ws@5.0.0(ws@8.15.1):
+  /isomorphic-ws@5.0.0(ws@8.17.1):
     resolution: {integrity: sha512-muId7Zzn9ywDsyXgTIafTry2sV3nySZeUDe6YedVd1Hvuuep5AsIlqK+XefWpYTyJG5e503F2xIuT2lcU6rCSw==}
     peerDependencies:
       ws: '*'
     dependencies:
-      ws: 8.15.1
+      ws: 8.17.1
     dev: false
 
   /js-tokens@4.0.0:
@@ -2372,8 +2372,8 @@ packages:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
     dev: true
 
-  /ws@8.15.1:
-    resolution: {integrity: sha512-W5OZiCjXEmk0yZ66ZN82beM5Sz7l7coYxpRkzS+p9PP+ToQry8szKh+61eNktr7EA9DOwvFGhfC605jDHbP6QQ==}
+  /ws@8.17.1:
+    resolution: {integrity: sha512-6XQFvXTkbfUOZOKKILFG1PDK2NDQs4azKQl26T0YS5CxqWLgXajbPZ+h4gZekJyRqFU8pvnbAbbs/3TgRPy+GQ==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
