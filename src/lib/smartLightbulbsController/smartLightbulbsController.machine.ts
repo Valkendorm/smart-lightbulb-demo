@@ -10,6 +10,7 @@ import { smartLightbulbMachine } from "../smartLightbulb/smartLightbulb.v3.machi
 
 export const smartLightbulbsControllerMachine = createMachine(
   {
+    /** @xstate-layout N4IgpgJg5mDOIC5QGUC2BDATgFwAQBkBLKAC2wCMBXAG3NlwGEB7AO20yeurEwGIBjTk0wA6fiXQsYAbQAMAXUSgADk1iFshVkpAAPRACYAbAZFGALLJMBWADQgAnolkBfF-bRY8RUhRp1GVnZObj5UJggwEQAqOUUkEFV1TW0E-QRjUwsrAztHRABGWVd3EE8cAmIyKlp6ZjYOLh5eVQB3Hhi4nSSNLRYddMyzSxt7Jwzitw8MCp9q-zqgxtDeckwwdABrWC6EnpT+tMMTYZy88YBmSamQFgi4HXLvKr9awIaQnm61XtTQdNkY2cbjcQA */
     context: {
       lightbulbRefs: [],
     },
